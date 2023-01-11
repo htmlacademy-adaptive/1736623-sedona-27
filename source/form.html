@@ -1,39 +1,38 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
 
-  <body class="page__body">
-
-    <header class="main-header">
-      <a class="main-header__logo">
-        <img class="main-header__logo-image" src="img/main-logo.png" width="185" height="96" alt="Седона - городок в Аризоне">
+  <body class="form__body body">
+    <header class="body__header main-header">
+      <a class="main-header__logo logotype" р>
+        <img class="logotype__logo-image" src="img/main-logo.png" width="185" height="96" alt="Седона - городок в Аризоне">
       </a>
-      <nav class="main-navigation">
+      <nav class="main-header__navigation main-navigation">
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-navigation__wrapper">
-          <ul class="main-navigation__list site-list">
-            <li class="site-list__item ">
-              <a href="index.html">
+        <div class="main-navigation__wrapper navigation">
+          <ul class="navigation__list navigation-list">
+            <li class="navigation-list__item">
+              <a class="navigation-list__item-link" href="#">
                 Главная
               </a>
             </li>
-            <li class="site-list__item">
-              <a href="catalog.html">
+            <li class="navigation-list__item">
+              <a class="navigation-list__item-link" href="catalog.html">
                 ФОТО И ВИДЕО
               </a>
             </li>
-            <li class="site-list__item site-list__item--active">
-              <a href="form.html">
+            <li class="navigation-list__item navigation-list__item--active">
+              <a class="navigation-list__item-link navigation-list__item-link--active" href="form.html">
                 Форма отзыва
               </a>
             </li>
-            <li class="site-list__item">
-              <a href="https://htmlacademy.ru/study">
+            <li class="navigation-list__item">
+              <a class="navigation-list__item-link" href="https://htmlacademy.ru/study">
                 HTML ACADEMY
               </a>
             </li>
@@ -42,127 +41,128 @@
       </nav>
     </header>
 
-    <main class="main-form">
-      <section class="main-title-wrapper">
-        <h1 class="main-title">
+    <main class="body__main main-form">
+      <section class="main-form__wrapper page-title">
+        <h1 class="page-title__title">
           Оставьте свой отзыв
         </h1>
-        <p class="main-title-description">
+        <p class="page-title__description">
           Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
       </section>
 
-      <section class="review">
-        <form class="review__form" action="post">
-          <div class="review__wrapper fullname">
-            <h2 class="rewiew__title">
+      <section class="main-form__review review">
+        <form class="review__form form-info" action="post">
+
+          <div class="form-info__wrapper fullname">
+            <h2 class="fullname__title">
               Представьтесь:
             </h2>
-            <div class="review__input-wrapper">
-              <label for="name-input">
+            <div class="fullname__wrapper input-section">
+              <label class="input-section__label" for="name-input">
                 ИМЯ*:
               </label>
-              <input class="review__input name" type="text" id="name-input" required/>
+              <input class="input-section__name" type="text" id="name-input" required/>
             </div>
-            <div class="review__input-wrapper">
-              <label for="surname-input">
+            <div class="fullname__wrapper input-section">
+              <label class="input-section__label" for="surname-input">
                 ФАМИЛИЯ*:
               </label>
-              <input class="review__input surname" type="text" id="surname-input" required/>
+              <input class="input-section__surname" type="text" id="surname-input" required/>
             </div>
-            <div class="review__input-wrapper">
-              <label for="patronymic-input">
+            <div class="fullname__wrapper input-section">
+              <label class="input-section__label" for="patronymic-input">
                 ОТЧЕСТВО:
               </label>
-              <input class="review__input patronymic" type="text" id="patronymic-input" required/>
+              <input class="input-section__patronymic" type="text" id="patronymic-input" required/>
             </div>
-
           </div>
 
-          <div class="review__wrapper contacts">
-            <h2 class="rewiew__title">
+          <div class="form-info__wrapper contacts">
+            <h2 class="contacts__title">
               Контактная информация:
             </h2>
-
-            <div class="review__input-wrapper">
-              <label for="phone-input">
+            <div class="contacts__wrapper contact-input">
+              <label class="contact-input__label" for="phone-input">
                 Контактный телефон*:
               </label>
-              <input class="review__input phone" type="tel" id="phone-input" required/>
+              <input class="contact-input__phone" type="tel" id="phone-input" required/>
             </div>
-            <div class="review__input-wrapper">
-              <label for="email-input">
+            <div class="contacts__wrapper contact-input">
+              <label class="contact-input__label" for="email-input">
                 Электронная почта*:
               </label>
-              <input class="review__input email" type="email" id="email-input" required/>
+              <input class="contact-input__email" type="email" id="email-input" required/>
             </div>
           </div>
 
-          <div class="review__wrapper impression">
-            <h2 class="rewiew__title">
+          <div class="form-info__wrapper impression">
+            <h2 class="impression__title">
               Ваше общее впечатление:
             </h2>
 
-            <fieldset class="review__input-wrapper">
-              <input class="review__input-radio positive-answer" type="radio" id="positive" name="condition" checked>
-              <label for="positive">
+            <fieldset class="impression__wrapper input-impression">
+              <input class="input-impression__input-radio" type="radio" id="positive" name="condition" checked>
+              <label class="input-impression__label" for="positive">
                 Скорее положительное
               </label>
 
-              <input class="review__input-radio negative-answer" type="radio" id="negative" name="condition">
-              <label for="negative">
+              <input class="input-impression__input-radio" type="radio" id="negative" name="condition">
+              <label class="input-impression__label" for="negative">
                 Скорее отрицательное
               </label>
 
-              <input class="review__input-radio difficult-answer" type="radio" id="difficult-to-answer" name="condition">
-              <label for="difficult-to-answer">
+              <input class="input-impression__input-radio" type="radio" id="difficult-to-answer" name="condition">
+              <label class="input-impression__label" for="difficult-to-answer">
                 Затрудняюсь ответить
               </label>
             </fieldset>
           </div>
 
-          <div class="review__wrapper visit-switcher">
-            <h2 class="rewiew__title">
+          <div class="form-info__wrapper visit-switcher">
+            <h2 class="visit-switcher__title">
               Посещенные достопримечательности:
             </h2>
 
-            <fieldset class="review__input-wrapper">
-              <input class="review__input-checkbox" type="checkbox" id="devil-bridge" name="switcher" checked>
-              <label for="devil-bridge">
+            <fieldset class="visit-switcher__wrapper input-switcher">
+              <input class="input-switcher__checkbox" type="checkbox" id="devil-bridge" name="switcher" checked>
+              <label class="input-switcher__label" for="devil-bridge">
                 Мост Дьявола
               </label>
 
-              <input class="review__input-checkbox" type="checkbox" id="mount" name="switcher" checked>
-              <label for="mount">
+              <input class="input-switcher__checkbox" type="checkbox" id="mount" name="switcher" checked>
+              <label class="input-switcher__label" for="mount">
                 Гора-Колокол
               </label>
 
-              <input class="review__input-checkbox" type="checkbox" id="slayd-park" name="switcher" checked>
-              <label for="slayd-park">
+              <input class="input-switcher__checkbox" type="checkbox" id="slayd-park" name="switcher" checked>
+              <label class="input-switcher__label" for="slayd-park">
                 Слайд-парк
               </label>
 
-              <input class="review__input-checkbox" type="checkbox" id="red-rocks" name="switcher">
-              <label for="red-rocks">
+              <input class="input-switcher__checkbox" type="checkbox" id="red-rocks" name="switcher">
+              <label class="input-switcher__label" for="red-rocks">
                 Красные скалы
               </label>
             </fieldset>
           </div>
 
-          <div class="review__wrapper review-emotions">
-            <h2 class="rewiew__title">
+          <div class="form-info__wrapper review-emotions">
+            <h2 class="review-emotions__title">
               Опишите свои эмоции:
             </h2>
 
-            <label for="emotions-input">
+            <label for="review-emotions__label">
               <span class="visually-hidden">Опишите подробно все свои восторги</span>
             </label>
-            <input class="review__input emotions" type="text" id="emotions-input" value="Опишите подробно все свои восторги">
+            <input class="review-emotions__input" type="text" id="emotions-input" value="Опишите подробно все свои восторги">
           </div>
 
-          <div class="review__send">
-            <button class="review-button"><span class="review-button__title">ОТПРАВИТЬ ОТЗЫВ</span></button>
-            <p class="review__send-mark">
+          <div class="form-info__wrapper review-send">
+            <button class="review-send__button send-review">
+              <span class="send-review__title">ОТПРАВИТЬ ОТЗЫВ</span>
+            </button>
+            <p class="review-send__mark">
               * — обязательные поля
             </p>
           </div>
@@ -170,22 +170,22 @@
       </section>
     </main>
 
-    <footer class="main-footer">
-      <div class="main-footer-wrapper">
-        <p class="footer-tag">#VISITSEDONA</p>
-        <ul class="footer-societes">
-          <li class="footer-societes__item">
-            <a class="footer-societes__item-link" href="https://vk.com/htmlacademy"><span class="visually-hidden">Ссылка на вконтакте</span></a>
+    <footer class="body__footer main-footer">
+      <div class="main-footer__wrapper social-info">
+        <p class="social-info__tag footer-tag">#VISITSEDONA</p>
+        <ul class="social-info__societes societes-list">
+          <li class="societes-list__item societe-item">
+            <a class="societe-item__link" href="https://vk.com/htmlacademy"><span class="visually-hidden">Ссылка на вконтакте</span></a>
           </li>
-          <li class="footer-societes__item">
-            <a class="footer-societes__item-link" href="tg://resolve?domain=htmlacademy"><span class="visually-hidden">Ссылка на телеграмм</span></a>
+          <li class="societes-list__item societe-item">
+            <a class="societe-item__link" href="tg://resolve?domain=htmlacademy"><span class="visually-hidden">Ссылка на телеграмм</span></a>
           </li>
-          <li class="footer-societes__item">
-            <a class="footer-societes__item-link" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ссылка на ютуб</span></a>
+          <li class="societes-list__item societe-item">
+            <a class="societe-item__link" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ссылка на ютуб</span></a>
           </li>
         </ul>
       </div>
-      <a class="footer-made-by" href="https://htmlacademy.ru/study">Разработано</a>
+      <a class="main-footer__made-by" href="https://htmlacademy.ru/study">Разработано</a>
     </footer>
   </body>
 </html>
