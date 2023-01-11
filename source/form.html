@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+
+  <body class="page__body">
+
+    <header class="main-header">
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="img/main-logo.png" width="185" height="96" alt="Седона - городок в Аризоне">
+      </a>
+      <nav class="main-navigation">
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-navigation__wrapper">
+          <ul class="main-navigation__list site-list">
+            <li class="site-list__item ">
+              <a href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">
+                ФОТО И ВИДЕО
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a href="form.html">
+                Форма отзыва
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="https://htmlacademy.ru/study">
+                HTML ACADEMY
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-form">
+      <section class="main-title-wrapper">
+        <h1 class="main-title">
+          Оставьте свой отзыв
+        </h1>
+        <p class="main-title-description">
+          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+        </p>
+      </section>
+
+      <section class="review">
+        <form class="review__form" action="post">
+          <div class="review__wrapper fullname">
+            <h2 class="rewiew__title">
+              Представьтесь:
+            </h2>
+            <div class="review__input-wrapper">
+              <label for="name-input">
+                ИМЯ*:
+              </label>
+              <input class="review__input name" type="text" id="name-input" required/>
+            </div>
+            <div class="review__input-wrapper">
+              <label for="surname-input">
+                ФАМИЛИЯ*:
+              </label>
+              <input class="review__input surname" type="text" id="surname-input" required/>
+            </div>
+            <div class="review__input-wrapper">
+              <label for="patronymic-input">
+                ОТЧЕСТВО:
+              </label>
+              <input class="review__input patronymic" type="text" id="patronymic-input" required/>
+            </div>
+
+          </div>
+
+          <div class="review__wrapper contacts">
+            <h2 class="rewiew__title">
+              Контактная информация:
+            </h2>
+
+            <div class="review__input-wrapper">
+              <label for="phone-input">
+                Контактный телефон*:
+              </label>
+              <input class="review__input phone" type="tel" id="phone-input" required/>
+            </div>
+            <div class="review__input-wrapper">
+              <label for="email-input">
+                Электронная почта*:
+              </label>
+              <input class="review__input email" type="email" id="email-input" required/>
+            </div>
+          </div>
+
+          <div class="review__wrapper impression">
+            <h2 class="rewiew__title">
+              Ваше общее впечатление:
+            </h2>
+
+            <fieldset class="review__input-wrapper">
+              <input class="review__input-radio positive-answer" type="radio" id="positive" name="condition" checked>
+              <label for="positive">
+                Скорее положительное
+              </label>
+
+              <input class="review__input-radio negative-answer" type="radio" id="negative" name="condition">
+              <label for="negative">
+                Скорее отрицательное
+              </label>
+
+              <input class="review__input-radio difficult-answer" type="radio" id="difficult-to-answer" name="condition">
+              <label for="difficult-to-answer">
+                Затрудняюсь ответить
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="review__wrapper visit-switcher">
+            <h2 class="rewiew__title">
+              Посещенные достопримечательности:
+            </h2>
+
+            <fieldset class="review__input-wrapper">
+              <input class="review__input-checkbox" type="checkbox" id="devil-bridge" name="switcher" checked>
+              <label for="devil-bridge">
+                Мост Дьявола
+              </label>
+
+              <input class="review__input-checkbox" type="checkbox" id="mount" name="switcher" checked>
+              <label for="mount">
+                Гора-Колокол
+              </label>
+
+              <input class="review__input-checkbox" type="checkbox" id="slayd-park" name="switcher" checked>
+              <label for="slayd-park">
+                Слайд-парк
+              </label>
+
+              <input class="review__input-checkbox" type="checkbox" id="red-rocks" name="switcher">
+              <label for="red-rocks">
+                Красные скалы
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="review__wrapper review-emotions">
+            <h2 class="rewiew__title">
+              Опишите свои эмоции:
+            </h2>
+
+            <label for="emotions-input">
+              <span class="visually-hidden">Опишите подробно все свои восторги</span>
+            </label>
+            <input class="review__input emotions" type="text" id="emotions-input" value="Опишите подробно все свои восторги">
+          </div>
+
+          <div class="review__send">
+            <button class="review-button"><span class="review-button__title">ОТПРАВИТЬ ОТЗЫВ</span></button>
+            <p class="review__send-mark">
+              * — обязательные поля
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="main-footer-wrapper">
+        <p class="footer-tag">#VISITSEDONA</p>
+        <ul class="footer-societes">
+          <li class="footer-societes__item">
+            <a class="footer-societes__item-link" href="https://vk.com/htmlacademy"><span class="visually-hidden">Ссылка на вконтакте</span></a>
+          </li>
+          <li class="footer-societes__item">
+            <a class="footer-societes__item-link" href="tg://resolve?domain=htmlacademy"><span class="visually-hidden">Ссылка на телеграмм</span></a>
+          </li>
+          <li class="footer-societes__item">
+            <a class="footer-societes__item-link" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ссылка на ютуб</span></a>
+          </li>
+        </ul>
+      </div>
+      <a class="footer-made-by" href="https://htmlacademy.ru/study">Разработано</a>
+    </footer>
+  </body>
+</html>
+
