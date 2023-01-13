@@ -1,0 +1,42 @@
+@import "./buttons-paddings.scss";
+.main-advantages__card{
+  border: 1px solid floralwhite;
+}
+.card-items__title{
+  @include null-margin-padding;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000;
+  &--pics{
+    color: #FFFFFF;
+  }
+}
+
+.quality-card__title{
+  @include null-margin-padding;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+}
+.card-items__description{
+  @include null-margin-padding;
+  color: inherit;
+  &--pics{
+    color: #FFFFFF;
+  }
+}
+.card-items__number{
+  @include null-margin-padding;
+  color: inherit;
+  &--pics{
+    color: #FFFFFF;
+  }
+}
+.card-items__description,
+.card-items__number,
+.quality-card__description
+{
+  @include null-margin-padding;
+}

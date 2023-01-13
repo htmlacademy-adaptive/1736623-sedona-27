@@ -1,0 +1,57 @@
+@import "./buttons-paddings.scss";
+.main-form{
+  background-color: tomato;
+  display: flex;
+  flex-direction: column;
+  margin-top: 117px;
+  margin-bottom: 64px
+}
+.page-title__title,
+.page-title__description,
+.fullname,
+.contacts,
+.impression__title,
+.visit-switcher__title,
+.review-emotions__title,
+.fullname__title,
+.contacts__title{
+ @include null-margin-padding;
+ text-transform: uppercase;
+}
+.review-send__button{
+  @include blue-button;
+}
+.page-title{
+  margin: 0 auto;
+}
+.page-title__title{
+  text-align: center;
+}
+.page-title__description{
+  word-wrap:break-word;
+  text-align: center;
+  width: 488px;
+}
+.form-info{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 960px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.impression{
+  grid-column: 1/-1;
+}
+.visit-switcher{
+  grid-column: 1/-1;
+}
+.review-emotions{
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.review-emotions__title,
+.review-emotions__input
+{
+  grid-column: 1/-1;
+}

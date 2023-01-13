@@ -1,0 +1,57 @@
+@import "./buttons-paddings.scss";
+@font-face {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/source/fonts/ptsansbold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/source/fonts/ptsansbold.woff2") format("woff2");
+  font-display: swap;
+}
+.main-header{
+  background-color: aquamarine;
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.main-navigation{
+
+}
+
+.navigation-list{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  list-style: none;
+  border: 1px solid tomato;
+  @include null-margin-padding;
+  justify-content: space-between;
+}
+.navigation-list__item{
+  border: 1px solid tomato;
+  padding: 18px 0 17px 0;
+}
+.navigation-list__item-link{
+  text-decoration: none;
+  color: #000;
+  &--active{
+    color: #766357;
+  }
+}
+
+.logotype{
+  position: absolute;
+  left: calc(50% - 92px);
+}
+.main-navigation__toggle{
+  display: none;
+}

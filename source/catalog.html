@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
 
   <body class="catalog__body body">
     <header class="body__header main-header">
       <a class="main-header__logo logotype" р>
-        <img class="logotype__logo-image" src="img/main-logo.png" width="185" height="96" alt="Седона - городок в Аризоне">
+        <img class="logotype__logo-image" src="img/logos/main-logo.png" width="185" height="96" alt="Седона - городок в Аризоне">
       </a>
       <nav class="main-header__navigation main-navigation">
         <button class="main-navigation__toggle" type="button">
@@ -17,13 +18,13 @@
         <div class="main-navigation__wrapper navigation">
           <ul class="navigation__list navigation-list">
             <li class="navigation-list__item ">
-              <a class="navigation-list__item-link " href="#">
+              <a class="navigation-list__item-link " href="index.html">
                 Главная
               </a>
             </li>
             <li class="navigation-list__item navigation-list__item--active">
               <a class="navigation-list__item-link navigation-list__item-link--active" href="catalog.html">
-                ФОТО И ВИДЕО
+                Фото и видео
               </a>
             </li>
             <li class="navigation-list__item">
@@ -33,12 +34,14 @@
             </li>
             <li class="navigation-list__item">
               <a class="navigation-list__item-link" href="https://htmlacademy.ru/study">
-                HTML ACADEMY
+                Html academy
               </a>
             </li>
           </ul>
         </div>
       </nav>
+      <img class="main-header__background" src="./img/content-pics/main-background-mount.jpg" height="518" width="1200">
+      <img class="main-header__sedona-title" src="./img/text/sedona.svg" height="80" width="460">
     </header>
 
     <main class="body__main main-catalog">
@@ -55,26 +58,26 @@
 
       <section class="main-catalog__content content-foto">
         <h2 class="visuall-hidden">авторские фото</h2>
-        <div class="content-foto__card picture-card">
-          <img class="picture-card__picture" alt="Неродные просторы" src="img/photo-bridge.png">
+        <div class="content-foto__card picture-card picture-card--big">
+          <img class="picture-card__picture picture--big" alt="Неродные просторы" src="img/content-pics/road-sunset.jpg">
           <p class="picture-card__title">Неродные просторы</p>
           <p class="picture-card__author-name">Автор фото: Борис</p>
         </div>
 
         <div class="content-foto__card picture-card">
-          <img class="picture-card__picture" alt="Местная растительность" src="img/photo-bridge.png">
+          <img class="picture-card__picture picture--mini" alt="Местная растительность" src="img/content-pics/vegetation.jpg">
           <p class="picture-card__title">Местная растительность</p>
           <p class="picture-card__author-name">Автор фото: Сергей</p>
         </div>
 
         <div class="content-foto__card picture-card">
-          <img class="picture-card__picture" alt="Дорога на север" src="img/photo-bridge.png">
+          <img class="picture-card__picture picture--mini" alt="Дорога на север" src="img/content-pics/road-to-the-north.jpg">
           <p class="picture-card__title">Дорога на север</p>
           <p class="picture-card__author-name">Автор фото: Петр</p>
         </div>
 
         <div class="content-foto__card picture-card">
-          <img class="picture-card__picture" alt="Мост дьявола" src="img/photo-bridge.png">
+          <img class="picture-card__picture picture--mini" alt="Мост дьявола" src="img/content-pics/photo-bridge.jpg">
           <p class="picture-card__title">Мост дьявола</p>
           <p class="picture-card__author-name">Автор фото: Антон</p>
         </div>
@@ -94,7 +97,7 @@
 
     <footer class="body__footer main-footer">
       <div class="main-footer__wrapper social-info">
-        <p class="social-info__tag footer-tag">#VISITSEDONA</p>
+        <p class="social-info__tag footer-tag">#Visitsedona</p>
         <ul class="social-info__societes societes-list">
           <li class="societes-list__item societe-item">
             <a class="societe-item__link" href="https://vk.com/htmlacademy"><span class="visually-hidden">Ссылка на вконтакте</span></a>
@@ -106,9 +109,8 @@
             <a class="societe-item__link" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ссылка на ютуб</span></a>
           </li>
         </ul>
+        <a class="social-info__made-by" href="https://htmlacademy.ru/study">Разработано</a>
       </div>
-      <a class="main-footer__made-by" href="https://htmlacademy.ru/study">Разработано</a>
     </footer>
   </body>
 </html>
-
