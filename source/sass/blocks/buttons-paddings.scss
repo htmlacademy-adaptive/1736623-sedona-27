@@ -1,5 +1,4 @@
 @mixin blue-button(){
-
   background-color: #81B3D2;
   font-family: 'PT Sans', sans-serif;
   font-style: normal;
@@ -14,7 +13,7 @@
   padding: 16px 140px;
   border: none;
 }
- @mixin null-margin-padding(){
+@mixin null-margin-padding(){
   margin: 0;
   padding: 0;
- }
+}
