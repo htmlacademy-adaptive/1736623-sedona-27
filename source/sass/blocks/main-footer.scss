@@ -1,31 +1,34 @@
-.social-info{
+.social-info {
   display: flex;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  color: #000;
+  color: #000000;
   padding: 36px;
   justify-content: center;
 }
-.social-info__tag{
+
+.social-info__tag {
   font-weight: 700;
   margin: 0;
 }
-.social-info__societes{
+
+.social-info__societes {
   list-style: none;
   display: flex;
   margin: 0;
-  padding: 0;
   padding: 20px;
-  border: 1px solid tomato;
+  border: 1px solid #ff0000;
 }
-.societes-list__item{
-  border: 1px solid tomato;
+
+.societes-list__item {
+  border: 1px solid #ff0000;
 }
-.societe-item__link{
+
+.societe-item__link {
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }

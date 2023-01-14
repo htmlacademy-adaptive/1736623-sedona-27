@@ -1,27 +1,33 @@
-.main-catalog{
-  background-color: forestgreen;
+.main-catalog {
+  background-color: #2e78c2;
 }
-.content-foto{
+
+.content-foto {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.picture-card{
-  border: 1px solid red;
-  &--big{
-    grid-column:  1 / -1;
+
+.picture-card {
+  border: 1px solid ff0000;
+
+  &--big {
+    grid-column: 1 / -1;
   }
 }
-.picture--mini{
+
+.picture--mini {
   width: 400px;
   height: 267px;
 }
+
 .page-title__title,
-.content-video__title{
+.content-video__title {
   font-size: 30px;
   font-weight: 700;
   color: #000000;
 }
+
 .page-title__description,
-.content-video__caption{
+.content-video__caption {
   text-transform: uppercase;
 }

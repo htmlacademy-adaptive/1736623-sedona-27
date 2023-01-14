@@ -1,6 +1,6 @@
-@mixin blue-button(){
-  background-color: #81B3D2;
-  font-family: 'PT Sans', sans-serif;
+@mixin blue-button() {
+  background-color: #81b3d2;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
@@ -9,11 +9,12 @@
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 16px 140px;
   border: none;
 }
-@mixin null-margin-padding(){
+
+@mixin null-margin-padding() {
   margin: 0;
   padding: 0;
 }

@@ -1,11 +1,13 @@
 @import "./buttons-paddings.scss";
-.main-form{
-  background-color: tomato;
+
+.main-form {
+  background-color: #ff0000;
   display: flex;
   flex-direction: column;
   margin-top: 117px;
-  margin-bottom: 64px
+  margin-bottom: 64px;
 }
+
 .page-title__title,
 .page-title__description,
 .fullname,
@@ -14,44 +16,52 @@
 .visit-switcher__title,
 .review-emotions__title,
 .fullname__title,
-.contacts__title{
+.contacts__title {
   @include null-margin-padding;
   text-transform: uppercase;
 }
-.review-send__button{
+
+.review-send__button {
   @include blue-button;
 }
-.page-title{
+
+.page-title {
   margin: 0 auto;
 }
-.page-title__title{
+
+.page-title__title {
   text-align: center;
 }
-.page-title__description{
-  word-wrap:break-word;
+
+.page-title__description {
+  word-wrap: break-word;
   text-align: center;
   width: 488px;
 }
-.form-info{
+
+.form-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 960px;
   margin: 0 auto;
   justify-content: space-between;
 }
-.impression{
+
+.impression {
   grid-column: 1/-1;
 }
-.visit-switcher{
+
+.visit-switcher {
   grid-column: 1/-1;
 }
-.review-emotions{
+
+.review-emotions {
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
 .review-emotions__title,
-.review-emotions__input
-{
+.review-emotions__input {
   grid-column: 1/-1;
 }

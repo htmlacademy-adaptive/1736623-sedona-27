@@ -1,44 +1,54 @@
 @import "./buttons-paddings.scss";
+
 .main-index {
   background: #777222;
   text-transform: uppercase;
   margin-top: 69px;
 }
-.main-advantages{
+
+.main-advantages {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border: 1px solid floralwhite;
+  border: 1px solid #fffaf0;
 }
 
-.main-advantages__photo{
-  border: 1px solid floralwhite;
-  &--right{
-    grid-column:  2 / -1;
-  }
-  &--left{
-    grid-column:  1 / 3;
+.main-advantages__photo {
+  border: 1px solid #fffaf0;
 
+  &--right {
+    grid-column: 2 / -1;
+  }
+
+  &--left {
+    grid-column: 1 / 3;
   }
 }
+
 .main-description__title,
-.main-form__title{
-  color: #000;
+.main-form-hostel__title {
+  color: #000000;
   font-size: 30px;
+
   @include null-margin-padding;
 }
-.main-form__button{
+
+.main-form-hostel__button {
   @include blue-button;
 }
-.main-description{
+
+.main-description {
   margin-bottom: 44px;
 }
-.all-discriptions{
+
+.all-discriptions {
   margin-bottom: 61px;
 }
+
 .main-description__caption,
-.main-form__discription{
+.main-form-hostel__discription {
   @include null-margin-padding;
 }
-.main-form{
+
+.main-form-hostel {
   margin-bottom: 66px;
 }
