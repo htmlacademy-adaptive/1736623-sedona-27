@@ -15,8 +15,8 @@
 .review-emotions__title,
 .fullname__title,
 .contacts__title{
- @include null-margin-padding;
- text-transform: uppercase;
+  @include null-margin-padding;
+  text-transform: uppercase;
 }
 .review-send__button{
   @include blue-button;
