@@ -1,11 +1,18 @@
 @import "./buttons-paddings.scss";
+@import "./body.scss";
 
 .main-form {
-  background-color: #ff0000;
   display: flex;
   flex-direction: column;
   margin-top: 117px;
   margin-bottom: 64px;
+}
+
+.form-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  justify-content: space-between;
 }
 
 .page-title__title,
@@ -19,6 +26,14 @@
 .contacts__title {
   @include null-margin-padding;
   text-transform: uppercase;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.input-section__label,
+.contact-input__label,
+.page-title__description {
+  font-size: 14px;
 }
 
 .review-send__button {
@@ -34,17 +49,7 @@
 }
 
 .page-title__description {
-  word-wrap: break-word;
   text-align: center;
-  width: 488px;
-}
-
-.form-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 960px;
-  margin: 0 auto;
-  justify-content: space-between;
 }
 
 .impression {
@@ -64,4 +69,55 @@
 .review-emotions__title,
 .review-emotions__input {
   grid-column: 1/-1;
+}
+
+.review-emotions__mark {
+  font-size: 12px;
+
+  @include null-margin-padding;
+}
+
+@media (min-width: $tablet-width) {
+  .form-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 60px;
+    justify-content: space-between;
+  }
+
+  .input-impression {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .input-switcher {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-title__title {
+    font-size: 30px;
+  }
+
+  .page-title {
+    margin: 0 166px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 960px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .input-impression {
+    display: flex;
+  }
+
+  .input-switcher {
+    display: flex;
+  }
 }
