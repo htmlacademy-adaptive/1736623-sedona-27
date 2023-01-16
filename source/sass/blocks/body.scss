@@ -43,8 +43,8 @@ $mobile-width-only: 767px;
   color: #333333;
   margin: 0 auto;
   padding: 0;
-  width: 1200px;
   min-height: 100%;
+  background-color: #e7e5e5;
 }
 
 .visually-hidden {
@@ -63,4 +63,30 @@ $mobile-width-only: 767px;
 img {
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  background-color: #ffffff;
+}
+
+@media (max-width: $mobile-width-only) {
+  .container {
+    max-width: 100%;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    max-width: 100%;
+    width: $tablet-width;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: $desktop-width;
+  }
 }

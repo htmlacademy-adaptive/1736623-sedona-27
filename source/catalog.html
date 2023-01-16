@@ -8,110 +8,112 @@
   </head>
 
   <body class="catalog__body body">
-    <header class="body__header main-header">
-      <a class="main-header__logo logotype" р>
-        <img class="logotype__logo-image" src="img/logos/main-logo.png" width="185" height="96" alt="Седона - городок в Аризоне">
-      </a>
-      <nav class="main-header__navigation main-navigation">
-        <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-navigation__wrapper navigation">
-          <ul class="navigation__list navigation-list">
-            <li class="navigation-list__item ">
-              <a class="navigation-list__item-link " href="index.html">
-                Главная
-              </a>
+    <div class="body__wrapper container">
+      <header class="container__header main-header">
+        <a class="main-header__logo logotype" р>
+          <img class="logotype__logo-image" src="img/logos/main-logo.png" width="185" height="96" alt="Седона - городок в Аризоне">
+        </a>
+        <nav class="main-header__navigation main-navigation">
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-navigation__wrapper navigation">
+            <ul class="navigation__list navigation-list">
+              <li class="navigation-list__item ">
+                <a class="navigation-list__item-link " href="index.html">
+                  Главная
+                </a>
+              </li>
+              <li class="navigation-list__item navigation-list__item--active">
+                <a class="navigation-list__item-link navigation-list__item-link--active" href="catalog.html">
+                  Фото и видео
+                </a>
+              </li>
+              <li class="navigation-list__item">
+                <a class="navigation-list__item-link" href="form.html">
+                  Форма отзыва
+                </a>
+              </li>
+              <li class="navigation-list__item">
+                <a class="navigation-list__item-link" href="https://htmlacademy.ru/study">
+                  Html academy
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <img class="main-header__background" src="./img/content-pics/main-background-mount.jpg" height="518" width="1200">
+        <img class="main-header__sedona-title" src="./img/text/sedona.svg" height="80" width="460">
+      </header>
+
+      <main class="container__main main-catalog">
+        <div class="main-catalog__wrapper">
+          <section class="main-catalog__wrapper-title page-title">
+            <h1 class="page-title__title">
+              Фото и видео
+            </h1>
+            <p class="page-title__description">
+              Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+            </p>
+          </section>
+        <div>
+
+        <section class="main-catalog__content content-foto">
+          <h2 class="visually-hidden">авторские фото</h2>
+          <div class="content-foto__card picture-card picture-card--big">
+            <img class="picture-card__picture picture--big" alt="Неродные просторы" src="img/content-pics/road-sunset.jpg">
+            <p class="picture-card__title">Неродные просторы</p>
+            <p class="picture-card__author-name">Автор фото: Борис</p>
+          </div>
+
+          <div class="content-foto__card picture-card">
+            <img class="picture-card__picture picture--mini" alt="Местная растительность" src="img/content-pics/vegetation.jpg">
+            <p class="picture-card__title">Местная растительность</p>
+            <p class="picture-card__author-name">Автор фото: Сергей</p>
+          </div>
+
+          <div class="content-foto__card picture-card">
+            <img class="picture-card__picture picture--mini" alt="Дорога на север" src="img/content-pics/road-to-the-north.jpg">
+            <p class="picture-card__title">Дорога на север</p>
+            <p class="picture-card__author-name">Автор фото: Петр</p>
+          </div>
+
+          <div class="content-foto__card picture-card">
+            <img class="picture-card__picture picture--mini" alt="Мост дьявола" src="img/content-pics/photo-bridge.jpg">
+            <p class="picture-card__title">Мост дьявола</p>
+            <p class="picture-card__author-name">Автор фото: Антон</p>
+          </div>
+        </section>
+
+        <section class="main-catalog__content content-video">
+          <h2 class="visually-hidden">авторские видео</h2>
+          <p class="content-video__title">
+            Все еще сомневаетесь?
+          </p>
+          <p class="content-video__caption">
+            Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+          </p>
+          <iframe class="video" src="https://www.youtube.com/embed/JyUJbgokDH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+      </main>
+
+      <footer class="container__footer main-footer">
+        <div class="main-footer__wrapper social-info">
+          <p class="social-info__tag footer-tag">#Visitsedona</p>
+          <ul class="social-info__societes societes-list">
+            <li class="societes-list__item societe-item">
+              <a class="societe-item__link" href="https://vk.com/htmlacademy"><span class="visually-hidden">Ссылка на вконтакте</span></a>
             </li>
-            <li class="navigation-list__item navigation-list__item--active">
-              <a class="navigation-list__item-link navigation-list__item-link--active" href="catalog.html">
-                Фото и видео
-              </a>
+            <li class="societes-list__item societe-item">
+              <a class="societe-item__link" href="tg://resolve?domain=htmlacademy"><span class="visually-hidden">Ссылка на телеграмм</span></a>
             </li>
-            <li class="navigation-list__item">
-              <a class="navigation-list__item-link" href="form.html">
-                Форма отзыва
-              </a>
-            </li>
-            <li class="navigation-list__item">
-              <a class="navigation-list__item-link" href="https://htmlacademy.ru/study">
-                Html academy
-              </a>
+            <li class="societes-list__item societe-item">
+              <a class="societe-item__link" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ссылка на ютуб</span></a>
             </li>
           </ul>
+          <a class="social-info__made-by" href="https://htmlacademy.ru/study">Разработано</a>
         </div>
-      </nav>
-      <img class="main-header__background" src="./img/content-pics/main-background-mount.jpg" height="518" width="1200">
-      <img class="main-header__sedona-title" src="./img/text/sedona.svg" height="80" width="460">
-    </header>
-
-    <main class="body__main main-catalog">
-      <div class="main-catalog__wrapper">
-        <section class="main-catalog__wrapper-title page-title">
-          <h1 class="page-title__title">
-            Фото и видео
-          </h1>
-          <p class="page-title__description">
-            Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
-          </p>
-        </section>
-      <div>
-
-      <section class="main-catalog__content content-foto">
-        <h2 class="visually-hidden">авторские фото</h2>
-        <div class="content-foto__card picture-card picture-card--big">
-          <img class="picture-card__picture picture--big" alt="Неродные просторы" src="img/content-pics/road-sunset.jpg">
-          <p class="picture-card__title">Неродные просторы</p>
-          <p class="picture-card__author-name">Автор фото: Борис</p>
-        </div>
-
-        <div class="content-foto__card picture-card">
-          <img class="picture-card__picture picture--mini" alt="Местная растительность" src="img/content-pics/vegetation.jpg">
-          <p class="picture-card__title">Местная растительность</p>
-          <p class="picture-card__author-name">Автор фото: Сергей</p>
-        </div>
-
-        <div class="content-foto__card picture-card">
-          <img class="picture-card__picture picture--mini" alt="Дорога на север" src="img/content-pics/road-to-the-north.jpg">
-          <p class="picture-card__title">Дорога на север</p>
-          <p class="picture-card__author-name">Автор фото: Петр</p>
-        </div>
-
-        <div class="content-foto__card picture-card">
-          <img class="picture-card__picture picture--mini" alt="Мост дьявола" src="img/content-pics/photo-bridge.jpg">
-          <p class="picture-card__title">Мост дьявола</p>
-          <p class="picture-card__author-name">Автор фото: Антон</p>
-        </div>
-      </section>
-
-      <section class="main-catalog__content content-video">
-        <h2 class="visually-hidden">авторские видео</h2>
-        <p class="content-video__title">
-          Все еще сомневаетесь?
-        </p>
-        <p class="content-video__caption">
-          Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
-        </p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JyUJbgokDH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </section>
-    </main>
-
-    <footer class="body__footer main-footer">
-      <div class="main-footer__wrapper social-info">
-        <p class="social-info__tag footer-tag">#Visitsedona</p>
-        <ul class="social-info__societes societes-list">
-          <li class="societes-list__item societe-item">
-            <a class="societe-item__link" href="https://vk.com/htmlacademy"><span class="visually-hidden">Ссылка на вконтакте</span></a>
-          </li>
-          <li class="societes-list__item societe-item">
-            <a class="societe-item__link" href="tg://resolve?domain=htmlacademy"><span class="visually-hidden">Ссылка на телеграмм</span></a>
-          </li>
-          <li class="societes-list__item societe-item">
-            <a class="societe-item__link" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ссылка на ютуб</span></a>
-          </li>
-        </ul>
-        <a class="social-info__made-by" href="https://htmlacademy.ru/study">Разработано</a>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

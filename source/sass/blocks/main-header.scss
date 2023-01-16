@@ -74,7 +74,7 @@
 
   .navigation-list__item {
     padding: 18px 0 17px 0;
-    width: 254px;
+    width: 154px;
     color: #000000;
     background-color: #ffffff;
 
@@ -89,5 +89,10 @@
     &--active {
       color: #766357;
     }
+  }
+}
+@media (min-width: $desktop-width) {
+  .navigation-list__item {
+    width: 254px;
   }
 }

@@ -11,7 +11,7 @@
 .form-info {
   display: flex;
   flex-direction: column;
-  margin: 0 60px;
+  margin: 0 20px;
   justify-content: space-between;
 }
 
@@ -26,6 +26,14 @@
 .contacts__title {
   @include null-margin-padding;
   text-transform: uppercase;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.input-section__label,
+.contact-input__label,
+.page-title__description {
+ font-size: 14px;
 }
 
 .review-send__button {
@@ -41,9 +49,7 @@
 }
 
 .page-title__description {
-  word-wrap: break-word;
   text-align: center;
-  width: 488px;
 }
 
 .impression {
@@ -65,9 +71,9 @@
   grid-column: 1/-1;
 }
 
-.fullname {
-  display: flex;
-  flex-direction: column;
+.review-emotions__mark {
+  font-size: 12px;
+  @include null-margin-padding;
 }
 
 @media (min-width: $tablet-width) {
@@ -86,6 +92,14 @@
   .input-switcher {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-title__title {
+    font-size: 30px;
+  }
+
+  .page-title {
+    margin: 0 166px;
   }
 }
 
