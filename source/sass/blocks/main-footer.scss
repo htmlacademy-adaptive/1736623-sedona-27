@@ -1,5 +1,8 @@
+@import "./body.scss";
+
 .social-info {
   display: flex;
+  flex-direction: column;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -7,13 +10,15 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
-  padding: 36px;
+  padding: 29px 77px 23px 77px;
   justify-content: center;
 }
 
 .social-info__tag {
   font-weight: 700;
   margin: 0;
+  font-size: 26px;
+  text-align: center;
 }
 
 .social-info__societes {
@@ -21,14 +26,16 @@
   display: flex;
   margin: 0;
   padding: 20px;
-  border: 1px solid #ff0000;
-}
-
-.societes-list__item {
-  border: 1px solid #ff0000;
 }
 
 .societe-item__link {
   text-decoration: none;
   color: #000000;
+}
+
+@media (min-width: $tablet-width) {
+  .social-info {
+    flex-direction: row;
+    padding: 36px;
+  }
 }

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body class="form__body body">
@@ -104,20 +105,26 @@
             </h2>
 
             <fieldset class="impression__wrapper input-impression">
-              <input class="input-impression__input-radio" type="radio" id="positive" name="condition" checked>
-              <label class="input-impression__label" for="positive">
-                Скорее положительное
-              </label>
+              <div class="input-impression__wrapper choice-block">
+                <input class="choice-block__input-radio" type="radio" id="positive" name="condition" checked>
+                <label class="choice-block__label" for="positive">
+                  Скорее положительное
+                </label>
+              </div>
 
-              <input class="input-impression__input-radio" type="radio" id="negative" name="condition">
-              <label class="input-impression__label" for="negative">
-                Скорее отрицательное
-              </label>
+              <div class="input-impression__wrapper choice-block">
+                <input class="choice-block__input-radio" type="radio" id="negative" name="condition">
+                <label class="choice-block__label" for="negative">
+                  Скорее отрицательное
+                </label>
+              </div>
 
-              <input class="input-impression__input-radio" type="radio" id="difficult-to-answer" name="condition">
-              <label class="input-impression__label" for="difficult-to-answer">
-                Затрудняюсь ответить
-              </label>
+              <div class="input-impression__wrapper choice-block">
+                <input class="choice-block__input-radio" type="radio" id="difficult-to-answer" name="condition">
+                <label class="choice-block__label" for="difficult-to-answer">
+                  Затрудняюсь ответить
+                </label>
+              </div>
             </fieldset>
           </div>
 
@@ -127,25 +134,33 @@
             </h2>
 
             <fieldset class="visit-switcher__wrapper input-switcher">
-              <input class="input-switcher__checkbox" type="checkbox" id="devil-bridge" name="switcher" checked>
-              <label class="input-switcher__label" for="devil-bridge">
-                Мост Дьявола
-              </label>
+              <div class="input-switcher__wrapper switcher-block">
+                <input class="switcher-block__checkbox" type="checkbox" id="devil-bridge" name="switcher" checked>
+                <label class="switcher-block__label" for="devil-bridge">
+                  Мост Дьявола
+                </label>
+              </div>
 
-              <input class="input-switcher__checkbox" type="checkbox" id="mount" name="switcher" checked>
-              <label class="input-switcher__label" for="mount">
-                Гора-Колокол
-              </label>
+              <div class="input-switcher__wrapper switcher-block">
+                <input class="switcher-block__checkbox" type="checkbox" id="mount" name="switcher" checked>
+                <label class="switcher-block__label" for="mount">
+                  Гора-Колокол
+                </label>
+              </div>
 
-              <input class="input-switcher__checkbox" type="checkbox" id="slayd-park" name="switcher" checked>
-              <label class="input-switcher__label" for="slayd-park">
-                Слайд-парк
-              </label>
+              <div class="input-switcher__wrapper switcher-block">
+                <input class="switcher-block__checkbox" type="checkbox" id="slayd-park" name="switcher" checked>
+                <label class="switcher-block__label" for="slayd-park">
+                  Слайд-парк
+                </label>
+              </div>
 
-              <input class="input-switcher__checkbox" type="checkbox" id="red-rocks" name="switcher">
-              <label class="input-switcher__label" for="red-rocks">
-                Красные скалы
-              </label>
+              <div class="input-switcher__wrapper switcher-block">
+                <input class="switcher-block__checkbox" type="checkbox" id="red-rocks" name="switcher">
+                <label class="switcher-block__label" for="red-rocks">
+                  Красные скалы
+                </label>
+              </div>
             </fieldset>
           </div>
 

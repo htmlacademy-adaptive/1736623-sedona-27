@@ -1,12 +1,5 @@
 @import "./buttons-paddings.scss";
-
-.card-items {
-  border: 1px solid #ffffff;
-}
-
-.quality-card {
-  border: 1px solid #ffffff;
-}
+@import "./body.scss";
 
 .card-items__title {
   @include null-margin-padding;
@@ -50,4 +43,12 @@
 .card-items__number,
 .quality-card__description {
   @include null-margin-padding;
+}
+
+.card-items-pics {
+  background-color: #81b3d2;
+}
+
+.card-items {
+  background-color: #eeeeee;
 }
