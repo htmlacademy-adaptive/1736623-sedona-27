@@ -1,4 +1,5 @@
-@import "./body.scss";
+@import "./variables-nums.scss";
+@import "./buttons-paddings.scss";
 
 .social-info {
   display: flex;
@@ -22,9 +23,8 @@
 }
 
 .social-info__societes {
-  list-style: none;
+  @include null-margin-padding;
   display: flex;
-  margin: 0;
   padding: 20px;
 }
 
