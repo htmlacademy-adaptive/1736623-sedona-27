@@ -1,34 +1,76 @@
 @import "./variables-nums.scss";
+@import "./buttons-paddings.scss";
 
 .main-catalog {
   padding: 0 20px;
+  margin-top: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 100px;
+  }
 }
 
-.picture--mini {
-  width: 400px;
-  height: 267px;
-}
-
-.page-title__title,
+.catalog-title__title,
 .content-video__title {
-  font-size: 30px;
+  font-size: 18px;
+  line-height: 26px;
   font-weight: 700;
   color: #000000;
 }
 
-.page-title__description,
+.content-video__title {
+  text-align: center;
+
+  @include null-margin-padding;
+
+  padding-bottom: 21px;
+}
+
+.content-video__caption {
+  @include null-margin-padding;
+  margin-bottom: 38px;
+}
+
+.catalog-title {
+  margin: 0 auto;
+}
+
+.catalog-title__title {
+  @include null-margin-padding;
+  padding-bottom: 21px;
+  text-align: center;
+}
+
+.catalog-title__description {
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.picture-card__title,
+.picture-card__author-name {
+  @include null-margin-padding;
+}
+
+.catalog-title__description,
 .content-video__caption {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .video {
-  margin-left: -20px;
+  width: 280px;
+  height: 177px;
 }
 
 @media (min-width: $tablet-width) {
   .content-foto {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 58px;
   }
 
   .picture-card {
@@ -42,15 +84,28 @@
   }
 
   .video {
-    width: $tablet-width;
-    height: 450px;
-    margin-left: -60px;
+    width: 648px;
+    height: 500px;
   }
-}
 
-@media (min-width: $mobile-width-only) {
-  .main-form-hostel__title {
-    font-size: 18px;
+  .catalog-title__title {
+    font-size: 30px;
+  }
+
+  .catalog-title {
+    margin: 0 166px;
+  }
+
+  .content-video {
+    margin: 0 auto;
+  }
+
+  .content-video__caption {
+    padding: 0 70px;
+  }
+
+  .content-video__title {
+    font-size: 30px;
   }
 }
 
@@ -64,9 +119,14 @@
     padding: 0;
   }
 
+  .content-video__caption {
+    padding: 0 350px;
+  }
+
   .video {
-    margin: 0;
-    width: $desktop-width;
-    height: 700px;
+    display: block;
+    margin: 0 auto;
+    width: 800px;
+    height: 685px;
   }
 }
