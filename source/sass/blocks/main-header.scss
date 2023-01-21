@@ -1,5 +1,5 @@
 @import "./buttons-paddings.scss";
-@import "./body.scss";
+@import "./variables-nums.scss";
 
 @font-face {
   font-family: "PT Sans", sans-serif;
@@ -33,18 +33,59 @@
 .navigation-list {
   display: flex;
   flex-direction: column;
-  list-style: none;
+  position: absolute;
+  width: 320px;
 
   @include null-margin-padding;
+}
+
+.navigation {
+  &--none {
+    display: none;
+  }
+
+  &--active {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+  }
 }
 
 .navigation-list__item {
   padding: 17px 0 12px 0;
   text-align: center;
   background-color: #81b3d2;
+  border-top: 1px solid rgba(#ffffff, 0.2);
+  border-bottom: 1px solid rgba(#000000, 0.2);
+  z-index: 5;
 
   &:nth-child(3) {
     grid-column: 4 / 5;
+  }
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    box-shadow: inset 0 -20px 20px -20px rgba(#000000, 0.4);
+  }
+
+  &:active {
+    background-color: $button-active-background;
+
+    .navigation-list__item-link {
+      color: rgba(#ffffff, 0.3);
+    }
+  }
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:disabled {
+    background-color: $button-disabled-background;
   }
 }
 
@@ -55,17 +96,272 @@
 
 .logotype {
   position: absolute;
+  width: 185px;
+  height: 96px;
   left: calc(50% - 92px);
+  z-index: 5;
+
+  &--none {
+    display: none;
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.main-header__navigation {
+  height: 56px;
+}
+
+.main-navigation__toggle {
+  padding: 0;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  width: 23px;
+  height: 22px;
+  z-index: 2;
+  cursor: pointer;
+  background-color: #ffffff;
+
+  &:hover,
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 4px;
+  background-color: #81b3d2;
+  box-shadow: 0 9px 0 0 #81b3d2, 0 18px 0 0 #81b3d2;
+}
+
+.main-navigation--closed .main-navigation__toggle:active::before {
+  box-shadow:
+    0 9px 0 0 rgba(#81b3d2, 0.3),
+    0 18px 0 0 rgba(#81b3d2, 0.3);
+}
+
+.main-navigation--opened .main-navigation__toggle {
+  right: 20px;
+  top: 17px;
+  background-color: #81b3d2;
+  z-index: 6;
+  position: absolute;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 9px;
+    left: -2px;
+    width: 28px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after,
+  &:hover::before,
+  &:hover::after {
+    background-color: $light-white;
+  }
+}
+
+.main-navigation--nojs .main-navigation__toggle {
+  display: none;
+}
+
+.main-navigation--nojs .main-navigation__wrapper {
+  display: block;
+  position: relative;
+}
+
+.background-header {
+  display: block;
+  width: 320px;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url("../img/content-pics/mountains.jpg");
+    position: absolute;
+    width: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    bottom: 0;
+    background-image: url("../img/icons/line.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    z-index: 1;
+  }
+
+  &--bigger {
+    height: 389px;
+
+    &::after {
+      height: 389px;
+      background-position: -290px 0;
+    }
+
+    &::before {
+      height: 389px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: $tablet-width;
+      height: 518px;
+      background-color: #000000;
+
+      &::after {
+        width: $tablet-width;
+        height: 518px;
+        background-position: 50% 100%;
+      }
+
+      &::before {
+        width: $tablet-width;
+        height: 518px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      width: $desktop-width;
+
+      &::after {
+        width: $desktop-width;
+      }
+
+      &::before {
+        width: $desktop-width;
+      }
+    }
+  }
+
+  &--smaller {
+    height: 158px;
+
+    &::after {
+      background-image: url("../img/content-pics/mountains.jpg");
+      height: 158px;
+      background-position: 44% 85%;
+      background-size: auto;
+    }
+
+    &::before {
+      height: 158px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: $tablet-width;
+      height: 290px;
+
+      &::after {
+        width: $tablet-width;
+        height: 518px;
+        background-position: -200px -228px;
+      }
+
+      &::before {
+        width: $tablet-width;
+        height: 290px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      width: $desktop-width;
+      height: 301px;
+
+      &::after {
+        width: $desktop-width;
+        background-position: 0 -217px;
+        height: 301px;
+      }
+
+      &::before {
+        width: $desktop-width;
+      }
+    }
+  }
+}
+
+.background-header__image {
+  display: block;
+  padding-top: 90px;
+  position: absolute;
+  z-index: 3;
+  left: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 77px;
+    width: 461px;
+    height: 350px;
+    left: 154px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 77px;
+    width: $desktop-width;
+    left: 0;
+  }
+}
+
+.background-header__image-sedona {
+  display: block;
+  padding-top: 52px;
+  position: absolute;
+  z-index: 3;
+  left: 45px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 95px;
+    width: 457px;
+    height: 78px;
+    left: 154px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 101px;
+    width: 460px;
+    height: 80px;
+    left: 369px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .navigation-list {
+    position: relative;
+    width: $tablet-width;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    z-index: 0;
   }
 
-  .logotype {
-    display: block;
+  .navigation {
+    display: flex;
   }
 
   .main-navigation__toggle {
@@ -77,9 +373,27 @@
     width: 154px;
     color: #000000;
     background-color: #ffffff;
+    border: none;
 
     &:nth-child(3) {
       grid-column: 4 / 5;
+    }
+
+    &:last-child {
+      box-shadow: none;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+
+      .navigation-list__item-link {
+        color: #81b3d2;
+      }
+    }
+
+    &:active .navigation-list__item-link {
+      color: #000000;
+      opacity: 0.3;
     }
   }
 
@@ -93,6 +407,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .navigation-list {
+    width: 1200px;
+  }
+
   .navigation-list__item {
     width: 254px;
   }

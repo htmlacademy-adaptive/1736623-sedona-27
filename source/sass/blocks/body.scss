@@ -1,6 +1,4 @@
-$tablet-width: 768px;
-$desktop-width: 1200px;
-$mobile-width-only: 767px;
+@import "./variables-nums.scss";
 
 @font-face {
   font-family: "PT Sans", sans-serif;
@@ -60,11 +58,6 @@ $mobile-width-only: 767px;
   overflow: hidden;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .container {
   background-color: #ffffff;
 }
@@ -72,7 +65,7 @@ img {
 @media (max-width: $mobile-width-only) {
   .container {
     max-width: 100%;
-    width: 300px;
+    width: 320px;
     margin: 0 auto;
   }
 }

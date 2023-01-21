@@ -1,4 +1,5 @@
-@import "./body.scss";
+@import "./variables-nums.scss";
+@import "./buttons-paddings.scss";
 
 .social-info {
   display: flex;
@@ -21,11 +22,33 @@
   text-align: center;
 }
 
+.footer-tag {
+  line-height: 26px;
+  margin: auto 0;
+}
+
 .social-info__societes {
-  list-style: none;
+  @include null-margin-padding;
   display: flex;
-  margin: 0;
   padding: 20px;
+}
+
+.social-info__made-by {
+  @include null-margin-padding;
+  margin: auto 0;
+  color: #000000;
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+
+  &:disabled {
+    color: #000000;
+  }
 }
 
 .societe-item__link {
@@ -36,6 +59,13 @@
 @media (min-width: $tablet-width) {
   .social-info {
     flex-direction: row;
-    padding: 36px;
+    justify-content: space-between;
+    padding: 36px 115px 36px 76px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social-info {
+    padding: 36px 175px 36px 104px;
   }
 }

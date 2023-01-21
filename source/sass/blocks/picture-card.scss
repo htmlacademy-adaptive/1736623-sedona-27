@@ -1,4 +1,5 @@
-@import "./body.scss";
+@import "./variables-nums.scss";
+@import "./buttons-paddings.scss";
 
 .picture-card__title {
   text-transform: uppercase;
@@ -6,19 +7,152 @@
   color: #000000;
 }
 
+.picture-card__picture {
+  background-size: cover;
+}
+
+
+.picture-card {
+  height: 338px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+  padding: 0 0 37px 0;
+  margin-bottom: 24px;
+
+  &::before {
+    content: "";
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: #e5e5e5;
+    bottom: 0;
+    left: -20px;
+  }
+
+  &:nth-child(2)::before {
+    background: url("../img/content-pics/road-sunset.jpg");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(3)::before {
+    background: url("../img/content-pics/vegetation.jpg");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(4)::before {
+    background: url("../img/content-pics/road-to-the-north.jpg");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:nth-child(5)::before {
+    background: url("../img/content-pics/bridge-ph.jpg");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    height: 332px;
+    margin-bottom: 0;
+    padding: 0 0 15px 0;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      width: 324px;
+    }
+
+    &:nth-child(2) {
+      width: 648px;
+      height: 465px;
+    }
+
+    &:nth-child(2)::before {
+      width: 648px;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
+    height: 267px;
+    background-color: rgba(#000000, 0.3);
+    z-index: 1;
+    padding: 0;
+
+    &::after {
+      display: block;
+      width: 400px;
+      height: 80px;
+      background-color: rgba(#000000, 0.3);
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    &:nth-child(2)::after {
+      width: 1200px;
+    }
+
+    &::before {
+      width: 400px;
+      height: 267px;
+      z-index: -1;
+    }
+
+    &:nth-child(2) {
+      width: 1200px;
+      height: 400px;
+    }
+
+    &:nth-child(2)::before {
+      width: 1200px;
+      height: 400px;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .picture-card {
     background-color: #eaeaea;
+  }
+
+  .picture-card__title,
+  .picture-card__author-name {
+    padding: 0 0 0 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .picture-card {
     color: #ffffff;
-    background-color: rgba(#000000, 0.3);
   }
 
   .picture-card__title {
     color: #ffffff;
+    padding: 0 0 0 25px;
+  }
+
+  .picture-card__author-name {
+    padding: 0 0 15px 25px;
   }
 }
