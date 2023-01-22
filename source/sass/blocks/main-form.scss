@@ -666,12 +666,21 @@
 
   @media (min-width: $tablet-width) {
     width: 616px;
+
+    &:focus {
+      width: 612px;
+      height: 110px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 734px;
     margin: 0 auto;
     margin-bottom: 48px;
+
+    &:focus {
+      width: 730px;
+    }
   }
 }
 
