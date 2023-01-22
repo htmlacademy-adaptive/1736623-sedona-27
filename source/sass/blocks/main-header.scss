@@ -92,6 +92,7 @@
 .navigation-list__item-link {
   text-decoration: none;
   color: #ffffff;
+  font-size: 18px;
 }
 
 .logotype {
@@ -188,6 +189,12 @@
   display: none;
 }
 
+.main-navigation--nojs {
+  @media (max-width: $mobile-width-only) {
+    height: 210px;
+  }
+}
+
 .main-navigation--nojs .main-navigation__wrapper {
   display: block;
   position: relative;
@@ -205,6 +212,7 @@
     width: 320px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50% 100%;
     z-index: 0;
   }
 
@@ -225,6 +233,12 @@
     &::after {
       height: 389px;
       background-position: -290px 0;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &::after {
+        background-image: url("../img/content-pics/mount2x.jpg");
+      }
     }
 
     &::before {
@@ -264,11 +278,17 @@
   &--smaller {
     height: 158px;
 
+
+    @media (min-resolution: 2dppx) {
+      &::after {
+        background-image: url("../img/content-pics/mount2x.jpg");
+        background-size: 280%;
+      }
+    }
+
     &::after {
-      background-image: url("../img/content-pics/mountains.jpg");
       height: 158px;
-      background-position: 44% 85%;
-      background-size: auto;
+      background-size: 280%;
     }
 
     &::before {
@@ -279,10 +299,17 @@
       width: $tablet-width;
       height: 290px;
 
+      @media (min-resolution: 2dppx) {
+        &::after {
+          background-size: 156%;
+        }
+      }
+
       &::after {
         width: $tablet-width;
         height: 518px;
-        background-position: -200px -228px;
+        background-size: 156%;
+        background-position: 50% -227px;
       }
 
       &::before {
@@ -299,6 +326,13 @@
         width: $desktop-width;
         background-position: 0 -217px;
         height: 301px;
+        background-size: 100%;
+      }
+
+      @media (min-resolution: 2dppx) {
+        &::after {
+          background-size: 100%;
+        }
       }
 
       &::before {
@@ -399,6 +433,7 @@
 
   .navigation-list__item-link {
     color: #000000;
+    font-size: 14px;
 
     &--active {
       color: #766357;
