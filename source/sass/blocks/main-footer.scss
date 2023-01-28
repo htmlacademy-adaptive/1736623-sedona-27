@@ -68,6 +68,7 @@
 
   &:hover {
     color: #81b3d2;
+
     .htmlacademy-logo {
       fill: #81b3d2;
     }
@@ -75,6 +76,7 @@
 
   &:active {
     color: #b3b3b3;
+
     .htmlacademy-logo {
       fill: #b3b3b3;
     }
@@ -82,6 +84,7 @@
 
   &:disabled {
     color: #000000;
+
     .htmlacademy-logo {
       fill: #000000;
     }
@@ -107,7 +110,7 @@
 
   display: flex;
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -123,9 +126,9 @@
   &:active {
     background-color: #5496bd;
 
-   .societe-logo {
-    opacity: 0.3;
-   }
+    .societe-logo {
+      opacity: 0.3;
+    }
   }
 }
 

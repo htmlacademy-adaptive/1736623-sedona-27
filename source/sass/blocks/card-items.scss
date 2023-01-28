@@ -1,7 +1,8 @@
 @import "./buttons-paddings.scss";
 @import "./variables-nums.scss";
 
-.card-items__title, .card-items-pics__title {
+.card-items__title,
+.card-items-pics__title {
   @include null-margin-padding;
   font-weight: 700;
   font-size: 18px;
@@ -26,7 +27,9 @@
   }
 }
 
-.title-pic, .number-pic, .description-pic {
+.title-pic,
+.number-pic,
+.description-pic {
   color: #ffffff;
 }
 
@@ -50,7 +53,7 @@
 
   &:nth-child(2) {
     &::before {
-      background: url("../img/icons/icon-house.svg") 50% 50% no-repeat;
+      background: url("../img/svg/icon-house.svg") 50% 50% no-repeat;
       background-size: 40px 40px;
     }
   }
@@ -58,7 +61,7 @@
   &:nth-child(3) {
     &::before {
       top: -1px;
-      background: url("../img/icons/icon-burger.svg") 50% 50% no-repeat;
+      background: url("../img/svg/icon-burger.svg") 50% 50% no-repeat;
       background-size: 40px 40px;
     }
   }
@@ -68,7 +71,7 @@
 
     &::before {
       top: -1px;
-      background: url("../img/icons/icon-gift.svg") 50% 50% no-repeat;
+      background: url("../img/svg/icon-gift.svg") 50% 50% no-repeat;
       background-size: 40px 40px;
     }
   }
@@ -128,6 +131,7 @@
 
     &:nth-child(3) {
       padding-top: 159px;
+
       &::before {
         top: 66px;
       }
@@ -136,6 +140,7 @@
     &:nth-child(4) {
       padding: 0 104px;
       padding-top: 159px;
+
       &::before {
         left: calc(50% - 40px);
         top: 66px;
@@ -201,10 +206,6 @@
     padding: 0 33px;
     justify-content: center;
   }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .card-items-pics:nth-child(1) .card-items-pics__wrapper {
@@ -237,7 +238,7 @@
       height: 37px;
       top: -5px;
       left: 0;
-      background-image: url("../img/icons/rectan.svg");
+      background-image: url("../img/svg/rectan.svg");
       z-index: 1;
     }
   }

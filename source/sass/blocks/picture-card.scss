@@ -56,7 +56,7 @@
     height: 21px;
     top: -5px;
     left: 0;
-    background-image: url("../img/icons/like-icon-dark.svg");
+    background-image: url("../img/svg/like-icon-dark.svg");
   }
 
   @media (min-width: $tablet-width) {
@@ -79,7 +79,7 @@
     &::after {
       top: -5px;
       left: 5px;
-      background-image: url("../img/icons/like-icon.svg");
+      background-image: url("../img/svg/like-icon.svg");
     }
   }
 }
@@ -189,6 +189,7 @@
     padding-bottom: 16px;
     padding-left: 25px;
   }
+
   .author-name--big {
     padding-left: 20px;
     padding-bottom: 15px;

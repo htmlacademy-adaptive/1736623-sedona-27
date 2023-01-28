@@ -1,7 +1,8 @@
 .background-header {
-  display: block;
+  display: flex;
   min-width: 320px;
   position: relative;
+  justify-content: center;
 
   &::after {
     content: "";
@@ -19,7 +20,7 @@
     position: absolute;
     min-width: 320px;
     bottom: 0;
-    background-image: url("../img/icons/line.svg");
+    background-image: url("../img/svg/line.svg");
     background-repeat: no-repeat;
     background-position: 50% 100%;
     z-index: 1;
@@ -103,6 +104,7 @@
       min-width: $tablet-width;
       min-height: 290px;
       margin-bottom: 64px;
+      padding-top: 0;
 
       @media (min-resolution: 2dppx) {
         &::after {
@@ -160,19 +162,15 @@
 
   &--full {
     padding-top: 90px;
-    left: 20px;
 
     @media (min-width: $tablet-width) {
       padding-top: 77px;
       min-width: 461px;
       min-height: 350px;
-      left: 154px;
     }
 
     @media (min-width: $desktop-width) {
       padding-top: 77px;
-      min-width: $desktop-width;
-      left: 0;
     }
   }
 

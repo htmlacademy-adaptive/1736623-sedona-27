@@ -359,7 +359,7 @@
   }
 
   @media (min-width: $desktop-width) {
-      margin-bottom: 67px;
+    margin-bottom: 67px;
 
     &::after {
       display: none;
@@ -447,12 +447,12 @@
   }
 
   &:nth-child(2)::after {
-    background: url("../img/icons/phone.svg") 50% 50% no-repeat;
+    background: url("../img/svg/phone.svg") 50% 50% no-repeat;
     background-color: #e6e6e6;
   }
 
   &:nth-child(3)::after {
-    background: url("../img/icons/mail.svg") 50% 50% no-repeat;
+    background: url("../img/svg/mail.svg") 50% 50% no-repeat;
     background-color: #e6e6e6;
   }
 
@@ -483,6 +483,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
+
     &::after {
       display: none;
     }

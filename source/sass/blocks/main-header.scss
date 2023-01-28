@@ -5,7 +5,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("./fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff") format("woff");
   font-display: swap;
 }
 
@@ -13,12 +13,12 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("./fonts/ptsansbold.woff2") format("woff2");
+  src: url("../fonts/ptsansbold.woff2") format("woff2");
   font-display: swap;
 }
 
 .main-header {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -92,14 +92,13 @@
   text-decoration: none;
   color: #ffffff;
 
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     font-family: "PT Sans", "Arial", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
   }
-
 }
 
 .logotype {
@@ -118,12 +117,12 @@
     display: block;
   }
 
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     position: absolute;
     left: 291px;
   }
 
-  @media (min-width: $desktop-width){
+  @media (min-width: $desktop-width) {
     left: 507px;
   }
 }
@@ -133,12 +132,13 @@
   min-height: 56px;
   background-color: #ffffff;
 
-  &--closed, &--opened {
+  &--closed,
+  &--opened {
     position: fixed;
     top: 0;
     z-index: 4;
 
-    @media (min-width: $tablet-width){
+    @media (min-width: $tablet-width) {
       position: relative;
       top: 0;
       left: 0;
@@ -224,7 +224,6 @@
 .main-navigation--nojs .main-navigation__wrapper {
   display: block;
   position: relative;
-
 }
 
 .main-navigation--nojs {
@@ -235,7 +234,7 @@
   }
 }
 
-.main-navigation--nojs .logotype{
+.main-navigation--nojs .logotype {
   position: absolute;
 }
 
