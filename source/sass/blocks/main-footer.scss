@@ -11,8 +11,18 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
-  padding: 29px 77px 23px 77px;
+  padding: 39px 77px 23px 77px;
   justify-content: center;
+
+
+  @media (min-width: $tablet-width) {
+    padding: 39px 45px 30px 60px;
+    max-height: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 39px 142px 30px 119px;
+  }
 }
 
 .social-info__tag {
@@ -23,49 +33,112 @@
 }
 
 .footer-tag {
+  font-size: 21px;
   line-height: 26px;
-  margin: auto 0;
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .social-info__societes {
   @include null-margin-padding;
   display: flex;
-  padding: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .social-info__made-by {
   @include null-margin-padding;
+
+  position: relative;
   margin: auto 0;
   color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 
   &:hover {
     color: #81b3d2;
+
+    .htmlacademy-logo {
+      fill: #81b3d2;
+    }
   }
 
   &:active {
     color: #b3b3b3;
+
+    .htmlacademy-logo {
+      fill: #b3b3b3;
+    }
   }
 
   &:disabled {
     color: #000000;
+
+    .htmlacademy-logo {
+      fill: #000000;
+    }
+  }
+}
+
+.htmlacademy-logo {
+  margin-left: 6px;
+}
+
+.societe-item {
+  @include null-margin-padding;
+
+  margin-right: 6px;
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 
 .societe-item__link {
+  @include null-margin-padding;
+
+  display: flex;
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+  background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+
+    .societe-logo {
+      opacity: 0.3;
+    }
+  }
+}
+
+.societe-logo {
+  fill: #ffffff;
 }
 
 @media (min-width: $tablet-width) {
   .social-info {
     flex-direction: row;
     justify-content: space-between;
-    padding: 36px 115px 36px 76px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .social-info {
-    padding: 36px 175px 36px 104px;
   }
 }

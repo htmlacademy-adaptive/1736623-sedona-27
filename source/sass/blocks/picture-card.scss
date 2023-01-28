@@ -15,6 +15,7 @@
   @media (min-width: $tablet-width) {
     width: 324px;
     height: 267px;
+    margin-bottom: 16px;
 
     &--big {
       width: 648px;
@@ -34,6 +35,54 @@
   }
 }
 
+// .picture-card__author-name {
+//   margin-bottom: 16px;
+// }
+
+.picture-card__likes {
+  @include null-margin-padding;
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding-left: 37px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 21px;
+    top: -5px;
+    left: 0;
+    background-image: url("../img/svg/like-icon-dark.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 27px;
+    right: 20px;
+
+    &::after {
+      top: -5px;
+      left: 5px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 27px;
+    right: 20px;
+    z-index: 3;
+    color: #ffffff;
+
+    &::after {
+      top: -5px;
+      left: 5px;
+      background-image: url("../img/svg/like-icon.svg");
+    }
+  }
+}
 
 .picture-card {
   height: 338px;
@@ -41,16 +90,20 @@
   flex-direction: column;
   position: relative;
   padding: 0 0 37px 0;
-  margin-bottom: 24px;
+  margin-bottom: 50px;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     width: 320px;
     height: 1px;
     background-color: #e5e5e5;
-    bottom: 0;
+    bottom: -26px;
     left: -20px;
+  }
+
+  &:nth-child(5) {
+    margin-bottom: 44px;
   }
 
   @media (min-width: $tablet-width) {
@@ -59,7 +112,7 @@
     margin-bottom: 0;
     padding: 0 0 15px 0;
 
-    &::after {
+    &::before {
       display: none;
     }
 
@@ -86,7 +139,7 @@
       height: 80px;
       bottom: 0;
       left: 0;
-      z-index: 1;
+      z-index: 3;
     }
 
     &:nth-child(2)::after {
@@ -119,10 +172,26 @@
 
   .picture-card__title {
     color: #ffffff;
-    padding: 0 0 0 25px;
+    background-color: rgba(#000000, 0.3);
+    padding-top: 18px;
+    padding-left: 25px;
+    padding-bottom: 4px;
+  }
+
+  .title--big {
+    padding-left: 20px;
+    padding-top: 23px;
+    padding-bottom: 0;
   }
 
   .picture-card__author-name {
-    padding: 0 0 15px 25px;
+    background-color: rgba(#000000, 0.3);
+    padding-bottom: 16px;
+    padding-left: 25px;
+  }
+
+  .author-name--big {
+    padding-left: 20px;
+    padding-bottom: 15px;
   }
 }

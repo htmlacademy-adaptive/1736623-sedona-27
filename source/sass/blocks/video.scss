@@ -1,0 +1,38 @@
+.video-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    height: 500px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 500px;
+  }
+}
+
+.video-block__block-movie {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+
+  @media (min-width: 1200px) {
+    width: 800px;
+    height: 500px;
+    object-fit: contain;
+  }
+}
+
+.video-block__play-button {
+  position: absolute;
+  background-image: url("../img/svg/play-button.svg");
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 0;
+  display: block;
+  width: 48px;
+  height: 54px;
+  cursor: pointer;
+}

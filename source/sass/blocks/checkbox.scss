@@ -1,0 +1,194 @@
+.impression__title {
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 37px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: calc(50% - 202px);
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: calc(50% - 202px);
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 54px;
+  }
+}
+
+.input-impression {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 36px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 49px 0 53px;
+  }
+}
+
+.choice-block {
+  font-family: "PT sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 768px) {
+    min-width: 280px;
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 242px;
+  }
+}
+
+.input-switcher {
+  font-family: "PT sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 108px 0 84px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 44px 0 44px;
+  }
+}
+
+.input-label {
+  display: inline-flex;
+
+  &--radio {
+    max-width: 280px;
+  }
+}
+
+.input-box {
+  position: absolute;
+  z-index: -5;
+  transform: translateX(10px);
+  margin: 0;
+}
+
+.input-box:focus + .input-label::before {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.input-box + .input-label::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 16px;
+  transform: translateY(-10px);
+}
+
+.input-box--radio + .input-label::before {
+  border-radius: 50%;
+}
+
+.input-box:hover + .label-box::before {
+  background-color: #e5e5e5;
+}
+
+.input-box:active + .label-box::before {
+  background-color: #d5d5d5;
+}
+
+.input-box:focus + .label-box::before {
+  outline: 1px solid #000000;
+  outline-offset: 1px;
+}
+
+.choice-block__input-radio:checked + .input-label::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #333333;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.switcher-block {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: 768px) {
+    min-width: 200px;
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 184px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.input-box--checkbox:checked + .input-label::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 16px;
+  border-radius: 50%;
+  background-image: url("../img/svg/tick-black.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 4px 12px;
+}

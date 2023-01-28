@@ -1,0 +1,22 @@
+.map-block {
+  background-image: url("../img/content-pics/intro-map.jpg");
+  background-color: #cce0a3;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../img/svg/map-marker.svg");
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 27px;
+  }
+}
