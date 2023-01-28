@@ -3,14 +3,11 @@
 
 .main-index {
   text-transform: uppercase;
-  margin-top: 32px;
+  font-size: 14px;
+  // padding-top: 56px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 48px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-top: 59px;
+    margin-top: 0;
   }
 }
 
@@ -30,143 +27,57 @@
 }
 
 .main-description__title {
-  padding-bottom: 26px;
+  padding: 0 10px 36px 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    padding-bottom: 28px;
+  }
+
+  // @media (min-width: $desktop-width) {
+  //   padding-bottom: 28px;
+  // }
 }
 
 .main-form-hostel__button {
   @include blue-button;
 
-  padding: 16px 49px;
+  min-width: 284px;
+  display: block;
+  justify-content: center;
+  padding: 18px 0 15px 0;
   margin: 0 auto;
+  font-size: 21px;
 }
 
 .main-description {
   display: flex;
   flex-direction: column;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
+  padding: 0 18px;
 
   @media (min-width: $tablet-width) {
     padding: 0 110px;
-    margin-bottom: 56px;
+    margin-bottom: 29px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 310px;
-    margin-bottom: 44px;
+    margin-bottom: 19px;
   }
 }
 
-.card-items-pics {
-  background-color: #81b3d2;
-  position: relative;
-  height: 377px;
 
-  &:nth-child(1)::after {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 256px;
-    background-image: url("../img/content-pics/city.jpg");
-    background-repeat: no-repeat;
-    left: 0;
-    bottom: 0;
-    background-position: 50%;
-    background-size: cover;
-  }
-
-  &:nth-child(5)::after {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 260px;
-    background-image: url("../img/content-pics/bridge.jpg");
-    background-repeat: no-repeat;
-    left: 0;
-    bottom: 0;
-    background-position: 50%;
-    background-size: cover;
-  }
-
-  @media (min-resolution: 2dppx) {
-    &:nth-child(1)::after {
-      background-image: url("../img/content-pics/city-small@2x.jpg");
-    }
-
-    &:nth-child(5)::after {
-      background-image: url("../img/content-pics/bridge-small@2x.jpg");
-      object-fit: fill;
-    }
-  }
+.all-descriptions {
+  margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    &:nth-child(1)::after {
-      left: 256px;
-      width: 512px;
-      height: 256px;
-    }
-
-    &:nth-child(5)::after {
-      width: 512px;
-      height: 256px;
-      left: -512px;
-    }
-
-    &:nth-child(1) {
-      grid-column: 1 / -1;
-    }
-
-    &:nth-child(5) {
-      grid-column: 3 / 4;
-    }
-
-    @media (min-resolution: 2dppx) {
-      &:nth-child(1)::after {
-        background-image: url("../img/content-pics/city-medium@2x.jpg");
-      }
-
-      &:nth-child(5)::after {
-        background-image: url("../img/content-pics/bridge-medium@2x.jpg");
-      }
-    }
+    margin-bottom: 62px;
   }
 
   @media (min-width: $desktop-width) {
-    &:nth-child(1)::after {
-      left: 400px;
-      width: 800px;
-      height: 256px;
-    }
-
-    &:nth-child(5)::after {
-      background-image: url("../img/content-pics/bridge-big.jpg");
-      width: 800px;
-      height: 256px;
-      left: -800px;
-      background-size: 800px 256px;
-    }
-
-    &:nth-child(1) {
-      grid-column: 1 / -1;
-    }
-
-    &:nth-child(5) {
-      grid-column: 3 / 4;
-    }
+    margin-bottom: 60px;
   }
-
-  @media (min-resolution: 2dppx) {
-    &:nth-child(1)::after {
-      background-image: url("../img/content-pics/city-big@2x.jpg");
-    }
-
-    &:nth-child(5)::after {
-      background-image: url("../img/content-pics/bridge@2x.jpg");
-    }
-  }
-}
-
-.all-descriptions {
-  margin-bottom: 61px;
 }
 
 .main-description__caption,
@@ -175,23 +86,51 @@
   text-align: center;
 }
 
-.main-form-hostel__description {
-  padding-bottom: 32px;
+.main-description__caption {
+  display: block;
+  min-width: 250px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
-    width: 442px;
-    padding-bottom: 40px;
+    min-width: 520px;
+    padding-bottom: 27px;
+  }
+}
+
+.main-form-hostel__description {
+  margin: 0 auto;
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 160px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 380px;
+    margin-bottom: 47px;
   }
 }
 
 .main-form-hostel {
+  padding: 0 18px;
   margin-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 67px;
+  }
 }
 
 .main-form-hostel__title {
+  padding-bottom: 19px;
   @media (min-width: $tablet-width) {
-    padding-bottom: 26px;
+    padding-bottom: 31px;
+    font-size: 30px;
   }
 }
 
@@ -200,14 +139,8 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .map {
-    width: 320px;
-    height: 350px;
-  }
-
   .main-form-hostel__title {
     font-size: 21px;
-    padding-bottom: 21px;
   }
 }
 
@@ -227,34 +160,8 @@
     }
   }
 
-  .map {
-    width: $tablet-width;
-    height: 350px;
-  }
-
-  .main-advantages__card + .quality-card {
-    grid-row: 2 / 3;
-
-    &--living {
-      grid-column: 1 / 2;
-    }
-  }
-
-  .main-form-hostel {
-    margin: 0 auto 49px auto;
-  }
-
   .main-form-hostel__button {
-    padding: 15px 121px 18px 121px;
-  }
-
-  .main-form-hostel__title {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .map {
-    width: $desktop-width;
+    padding: 16px 0;
+    min-width: 458px;
   }
 }

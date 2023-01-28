@@ -1,0 +1,197 @@
+.background-header {
+  display: block;
+  min-width: 320px;
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url("../img/content-pics/mountains.jpg");
+    position: absolute;
+    min-width: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+    z-index: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    min-width: 320px;
+    bottom: 0;
+    background-image: url("../img/icons/line.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    z-index: 1;
+  }
+
+  &--bigger {
+    min-height: 389px;
+    margin-bottom: 34px;
+    padding-top: 56px;
+
+    &::after {
+      min-height: 389px;
+      background-position: -290px 0;
+    }
+
+    @media (min-resolution: 2dppx) {
+      &::after {
+        background-image: url("../img/content-pics/mount2x.jpg");
+      }
+    }
+
+    &::before {
+      min-height: 389px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+      min-width: $tablet-width;
+      min-height: 518px;
+      background-color: #000000;
+      margin-bottom: 49px;
+
+      &::after {
+        min-width: $tablet-width;
+        min-height: 518px;
+        background-position: 50% 100%;
+      }
+
+      &::before {
+        min-width: $tablet-width;
+        min-height: 518px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: $desktop-width;
+      margin-bottom: 60px;
+
+      &::after {
+        min-width: $desktop-width;
+      }
+
+      &::before {
+        min-width: $desktop-width;
+      }
+    }
+  }
+
+  &--smaller {
+    min-height: 178px;
+    margin-bottom: 37px;
+    padding-top: 36px;
+
+    @media (min-resolution: 2dppx) {
+      &::after {
+        background-image: url("../img/content-pics/mount2x.jpg");
+        background-size: 280%;
+      }
+    }
+
+    &::after {
+      min-height: 178px;
+      background-size: 280%;
+    }
+
+    &::before {
+      min-height: 178px;
+    }
+
+    @media (min-width: $tablet-width) {
+      min-width: $tablet-width;
+      min-height: 290px;
+      margin-bottom: 64px;
+
+      @media (min-resolution: 2dppx) {
+        &::after {
+          background-size: 156%;
+        }
+      }
+
+      &::after {
+        min-width: $tablet-width;
+        min-height: 518px;
+        background-size: 156%;
+        background-position: 50% -227px;
+      }
+
+      &::before {
+        min-width: $tablet-width;
+        min-height: 290px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: $desktop-width;
+      min-height: 301px;
+      margin-bottom: 115px;
+
+      &::after {
+        min-width: $desktop-width;
+        background-position: 0 -217px;
+        min-height: 301px;
+        background-size: 100%;
+      }
+
+      @media (min-resolution: 2dppx) {
+        &::after {
+          background-size: 100%;
+        }
+      }
+
+      &::before {
+        min-width: $desktop-width;
+      }
+    }
+  }
+
+  &--catalog {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 96px;
+    }
+  }
+}
+
+.image {
+  position: absolute;
+  z-index: 3;
+
+  &--full {
+    padding-top: 90px;
+    left: 20px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 77px;
+      min-width: 461px;
+      min-height: 350px;
+      left: 154px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 77px;
+      min-width: $desktop-width;
+      left: 0;
+    }
+  }
+
+  &--mini {
+    padding-top: 72px;
+    left: 44px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 95px;
+      min-width: 457px;
+      min-height: 78px;
+      left: 154px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 101px;
+      min-width: 460px;
+      min-height: 80px;
+      left: 369px;
+    }
+  }
+}

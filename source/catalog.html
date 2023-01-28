@@ -15,7 +15,7 @@
     <div class="body__wrapper container">
       <header class="container__header main-header">
         <a class="main-header__logo logotype logotype--active">
-          <img class="logotype__logo-image" src="img/logos/main-logo.png" width="185" height="96" alt="Седона - городок в Аризоне">
+          <img class="logotype__logo-image" src="img/logos/main-logo.svg" width="185" height="96" alt="Седона - городок в Аризоне">
         </a>
         <nav class="main-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
           <button class="main-navigation__toggle" type="button">
@@ -46,12 +46,13 @@
             </ul>
           </div>
         </nav>
-        <div class="main-header__background background-header background-header--smaller">
-          <img class="background-header__image-sedona" src="./img/text/sedona.svg" width="229" height="39">
-        </div>
       </header>
 
       <main class="container__main main-catalog">
+        <div class="main-catalog__background background-header background-header--smaller background-header--catalog">
+          <img class="background-header__image image image--mini" src="./img/text/sedona.svg" width="229" height="39" alt="Sedona">
+        </div>
+
         <div class="main-catalog__wrapper">
           <section class="main-catalog__wrapper-title catalog-title">
             <h1 class="catalog-title__title">
@@ -68,36 +69,40 @@
 
           <div class="content-foto__card picture-card picture-card--big">
             <picture>
-              <img class="picture-card__picture picture picture--big" src="img/content-pics/road-sunset.jpg" width="280" height="280" alt="280" srcset="img/content-pics/road-sunset@2x.jpg 2x">
+              <img class="picture-card__picture picture picture--big" src="img/content-pics/road-sunset.jpg" width="280" height="280" alt="дорожный пейзаж во время заката" srcset="img/content-pics/road-sunset@2x.jpg 2x">
             </picture>
-            <p class="picture-card__title">Неродные просторы</p>
-            <p class="picture-card__author-name">Автор фото: Борис</p>
+            <p class="picture-card__title title title--big">Неродные просторы</p>
+            <p class="picture-card__author-name author-name author-name--big">Автор фото: Борис</p>
+            <p class="picture-card__likes">1350</p>
           </div>
 
           <div class="content-foto__card picture-card">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/content-pics/vegetation.jpg 1x, img/content-pics/vegetation@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/content-pics/vegetation-middle.jpg 1x, img/content-pics/vegetation-middle@2x.jpg 2x">
-              <img class="picture-card__picture picture" src="img/content-pics/vegetation.jpg" width="280" height="280" alt="280" srcset="img/content-pics/vegetation@2x.jpg 2x">
+              <img class="picture-card__picture picture" src="img/content-pics/vegetation.jpg" width="280" height="280" alt="Растительность" srcset="img/content-pics/vegetation@2x.jpg 2x">
             </picture>
             <p class="picture-card__title">Местная растительность</p>
             <p class="picture-card__author-name">Автор фото: Сергей</p>
+            <p class="picture-card__likes">143</p>
           </div>
 
           <div class="content-foto__card picture-card">
             <picture>
-              <img class="picture-card__picture picture" src="img/content-pics/road-to-the-north.jpg" width="280" height="280" alt="280" srcset="img/content-pics/road-to-the-north@2x.jpg 2x">
+              <img class="picture-card__picture picture" src="img/content-pics/road-to-the-north.jpg" width="280" height="280" alt="фото - дорога на север" srcset="img/content-pics/road-to-the-north@2x.jpg 2x">
             </picture>
             <p class="picture-card__title">Дорога на север</p>
             <p class="picture-card__author-name">Автор фото: Петр</p>
+            <p class="picture-card__likes">96</p>
           </div>
 
           <div class="content-foto__card picture-card">
             <picture>
-              <img class="picture-card__picture picture" src="img/content-pics/bridge-catalog.jpg" width="280" height="280" alt="280" srcset="img/content-pics/bridge-catalog@2x.jpg 2x">
+              <img class="picture-card__picture picture" src="img/content-pics/bridge-catalog.jpg" width="280" height="280" alt="фото - мост дьявола" srcset="img/content-pics/bridge-catalog@2x.jpg 2x">
             </picture>
             <p class="picture-card__title">Мост дьявола</p>
             <p class="picture-card__author-name">Автор фото: Антон</p>
+            <p class="picture-card__likes">254</p>
           </div>
         </section>
 
@@ -109,7 +114,13 @@
           <p class="content-video__caption">
             Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
           </p>
-          <iframe class="video" src="https://www.youtube.com/embed/JyUJbgokDH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+          <div class="content-video video-block">
+            <video class="video-block__block-movie" poster="img/video-desktop.jpg" src="#"></video>
+            <button class="video-block__play-button">
+              <span class="visually-hidden">Play</span>
+            </button>
+          </div>
         </section>
       </main>
 
@@ -118,16 +129,36 @@
           <p class="social-info__tag footer-tag">#Visitsedona</p>
           <ul class="social-info__societes societes-list">
             <li class="societes-list__item societe-item">
-              <a class="societe-item__link" href="https://vk.com/htmlacademy"><span class="visually-hidden">Ссылка на вконтакте</span></a>
+              <a class="societe-item__link vk" href="https://vk.com/htmlacademy">
+                <svg class="societe-logo" width="24" height="14">
+                  <use href="#vk"></use>
+                </svg>
+                <span class="visually-hidden">Ссылка на вконтакте</span>
+              </a>
             </li>
             <li class="societes-list__item societe-item">
-              <a class="societe-item__link" href="tg://resolve?domain=htmlacademy"><span class="visually-hidden">Ссылка на телеграмм</span></a>
+              <a class="societe-item__link telegram" href="tg://resolve?domain=htmlacademy">
+                <svg class="societe-logo" width="22" height="18">
+                  <use href="#telegram"></use>
+                </svg>
+                <span class="visually-hidden">Ссылка на телеграмм</span>
+              </a>
             </li>
             <li class="societes-list__item societe-item">
-              <a class="societe-item__link" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ссылка на ютуб</span></a>
+              <a class="societe-item__link youtube" href="https://www.youtube.com/user/htmlacademyru">
+                <svg class="societe-logo" width="20" height="14">
+                  <use href="#youtube"></use>
+                </svg>
+                <span class="visually-hidden">Ссылка на ютуб</span>
+              </a>
             </li>
           </ul>
-          <a class="social-info__made-by" href="https://htmlacademy.ru/study">Разработано</a>
+          <a class="social-info__made-by" href="https://htmlacademy.ru/study">
+            Разработано
+            <svg class="htmlacademy-logo" width="27" height="34">
+              <use href="#htmlacademy-logo"></use>
+            </svg>
+          </a>
         </div>
       </footer>
     </div>
