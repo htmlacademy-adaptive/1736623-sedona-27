@@ -7,6 +7,10 @@
   color: #000000;
 }
 
+.content-foto__card {
+  text-decoration: none;
+}
+
 .picture {
   margin-bottom: 10px;
   object-fit: cover;
@@ -35,10 +39,6 @@
   }
 }
 
-// .picture-card__author-name {
-//   margin-bottom: 16px;
-// }
-
 .picture-card__likes {
   @include null-margin-padding;
   color: #000000;
@@ -48,6 +48,7 @@
   text-transform: uppercase;
   padding-left: 37px;
   position: relative;
+  margin-top: 15px;
 
   &::after {
     content: "";
@@ -63,6 +64,7 @@
     position: absolute;
     bottom: 27px;
     right: 20px;
+    margin-top: 0;
 
     &::after {
       top: -5px;
@@ -151,6 +153,10 @@
       height: 400px;
     }
   }
+}
+
+.picture-card__author-name {
+  color: #333333;
 }
 
 @media (min-width: $tablet-width) {
