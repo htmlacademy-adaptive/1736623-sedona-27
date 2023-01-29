@@ -1,5 +1,5 @@
-@import "./buttons-paddings.scss";
-@import "./variables-nums.scss";
+@import "./elements/buttons-paddings.scss";
+@import "./elements/variables-nums.scss";
 
 .main-form {
   display: flex;
@@ -177,7 +177,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 60px;
-    margin-bottom: 0;
+    margin-bottom: 71px;
 
     &::after {
       display: none;
@@ -312,22 +312,6 @@
   &:nth-child(3) {
     margin-bottom: 0;
   }
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 46px;
-  //   height: 46px;
-  //   left: 5px;
-  //   top: 2px;
-  //   background-color: #f2f2f2;
-  //   border-radius: 50%;
-  //   z-index: 1;
-  // }
-
-  // &:hover::after {
-  //   background-color: #e5e5e5;
-  // }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;

@@ -1,5 +1,5 @@
-@import "./buttons-paddings.scss";
-@import "./variables-nums.scss";
+@import "./elements/buttons-paddings.scss";
+@import "./elements/variables-nums.scss";
 
 @font-face {
   font-family: "PT Sans";
@@ -244,6 +244,7 @@
     min-width: $tablet-width;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     z-index: 0;
   }
 
@@ -257,13 +258,13 @@
 
   .navigation-list__item {
     padding: 18px 0 12px 0;
-    min-width: 154px;
+    min-width: 153px;
     color: #000000;
     background-color: #ffffff;
     border: none;
 
     &:nth-child(2) {
-      margin-right: 153px;
+      margin-right: 155px;
     }
 
     &:last-child {

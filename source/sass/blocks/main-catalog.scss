@@ -1,5 +1,5 @@
-@import "./variables-nums.scss";
-@import "./buttons-paddings.scss";
+@import "./elements/buttons-paddings.scss";
+@import "./elements/variables-nums.scss";
 
 .main-catalog__wrapper {
   padding: 0 20px;
@@ -74,7 +74,7 @@
 
 .catalog-title__title {
   @include null-margin-padding;
-  padding-bottom: 11px;
+  padding-bottom: 26px;
   text-align: center;
   text-transform: uppercase;
 
